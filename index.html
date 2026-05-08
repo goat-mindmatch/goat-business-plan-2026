@@ -2448,6 +2448,153 @@
     .nav-chapter-link { font-size: 11px !important; padding: 4px 8px !important; }
   }
 
+
+/* =====================================================
+   MOBILE RESPONSIVE — 包括的モバイル対応 v2
+   ===================================================== */
+
+/* ── 共通: セクション padding をモバイルで縮小 ─────── */
+@media (max-width: 768px) {
+  #bridge-intro {
+    padding: 60px 20px !important;
+  }
+  #prologue-hero,
+  #prologue-sec1,
+  #prologue-sec2 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  /* ナビ */
+  .nav {
+    padding: 10px 16px !important;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .nav-logo {
+    font-size: 11px !important;
+    white-space: nowrap;
+  }
+
+  /* ── ヒーローセクション ───────────────────────── */
+  .hero-title { font-size: 32px !important; }
+  .hero-sub   { font-size: 14px !important; }
+  .hero-numbers { grid-template-columns: 1fr 1fr !important; }
+
+  /* ── 表: comparison ──────────────────────────── */
+  .comparison-section { padding: 16px !important; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .comparison { min-width: 520px; font-size: 12px; }
+  .comparison th, .comparison td { padding: 10px 8px !important; font-size: 12px !important; }
+
+  /* ── 表: revenue-table ───────────────────────── */
+  .revenue-table { min-width: 480px; font-size: 11px; }
+  .revenue-table th, .revenue-table td { padding: 8px 6px !important; font-size: 11px !important; }
+  .revenue-table .biz-name { font-size: 11px !important; }
+
+  /* ── CH.04 マトリクス ───────────────────────── */
+  .matrix-container { padding: 12px !important; }
+  .matrix-header,
+  .matrix-row {
+    grid-template-columns: 100px 1fr 1fr !important;
+    min-width: 480px;
+    gap: 8px !important;
+  }
+  .matrix-header .col-header .name { font-size: 13px !important; }
+  .row-label { padding: 10px 8px !important; font-size: 12px !important; }
+  .quadrant { padding: 10px !important; min-height: 90px !important; }
+  .quadrant .q-title { font-size: 12px !important; }
+  .quadrant .q-desc  { font-size: 11px !important; }
+
+  /* タブボタン(象限切替) */
+  .tabs { flex-wrap: wrap !important; gap: 6px !important; }
+  .tab { font-size: 11px !important; padding: 7px 10px !important; }
+
+  /* ── フライホイール ───────────────────────────── */
+  .flywheel-section { padding: 20px 16px !important; }
+  .flywheel-explainer { grid-template-columns: 1fr !important; }
+  .double-arrow { flex-direction: column !important; gap: 12px !important; }
+
+  /* ── グリッド系 ──────────────────────────────── */
+  .positioning-grid { grid-template-columns: 1fr !important; }
+  .source-layer      { grid-template-columns: 1fr !important; }
+  .phase-grid        { grid-template-columns: 1fr !important; }
+  .org-grid          { grid-template-columns: 1fr !important; }
+  .kpi-row           { grid-template-columns: 1fr !important; }
+  .pillars-grid      { grid-template-columns: 1fr !important; }
+  .roles-grid        { grid-template-columns: 1fr !important; }
+  .delegation-item   { grid-template-columns: 1fr !important; }
+  .case-comparison   { grid-template-columns: 1fr !important; }
+  .initiative-card   { grid-template-columns: 1fr !important; }
+
+  /* ── 統計・数値カード ────────────────────────── */
+  .stat-box, .stat-card, .metric-card {
+    padding: 16px !important;
+  }
+
+  /* ── プロローグ WIN-WIN-WIN カード ───────────── */
+  .win-cards-wrap {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  /* ── BRIDGE: 3前提ブロック ───────────────────── */
+  #bridge-intro .bridge-block {
+    flex-direction: column !important;
+    padding: 24px 20px !important;
+  }
+  #bridge-intro [style*="display:flex;gap:32px"] {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  /* BRIDGE: CH フロー矢印バッジ */
+  #bridge-intro [style*="display:flex;flex-wrap:wrap;gap:12px"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  #bridge-intro [style*="font-size:18px"] {
+    transform: rotate(90deg);
+    display: block;
+    margin: -4px 0;
+  }
+
+  /* ── 引用・ハイライトボックス ────────────────── */
+  .quote-box .text   { font-size: 15px !important; }
+  .premise-box .main { font-size: 17px !important; }
+  .question-section .main { font-size: 20px !important; }
+
+  /* ── セクションタイトル ──────────────────────── */
+  .section-title { font-size: 24px !important; }
+
+  /* ── 汎用インライン flex 折り返し ─────────────── */
+  /* 水平並びの要素グループをモバイルで縦積みにする */
+  [style*="display:flex"][style*="gap:12px"],
+  [style*="display:flex"][style*="gap:16px"],
+  [style*="display:flex"][style*="gap:20px"],
+  [style*="display:flex"][style*="gap:24px"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* ── KPI ツリー ──────────────────────────────── */
+  .kpi-row .kpi-value { grid-template-columns: 1fr 1fr !important; }
+
+  /* ── ロールカード ────────────────────────────── */
+  .role-card { padding: 16px !important; }
+
+  /* ── 全体パディング調整 ──────────────────────── */
+  .section { padding: 60px 20px !important; }
+  .container, .content-wrap { padding: 0 16px !important; max-width: 100% !important; }
+}
+
+/* ── 極小画面 (〜375px) 追加調整 ────────────────── */
+@media (max-width: 375px) {
+  .nav-chapter-link { font-size: 10px !important; padding: 4px 6px !important; }
+  .hero-title { font-size: 26px !important; }
+  .section-title { font-size: 20px !important; }
+  .comparison { min-width: 420px; }
+  .revenue-table { min-width: 400px; }
+  .matrix-header, .matrix-row { min-width: 400px; }
+}
+
 </style>
 </head>
 <body>
@@ -4457,7 +4604,7 @@
       <button class="tab" onclick="showQuadrant(event, 'q4')">Q4：CRM×パートナー</button>
     </div>
 
-    <div class="matrix-container">
+    <div class="matrix-container" style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
 
       <div class="matrix-header">
         <div class="corner">↓ チャネル<br>サービス →</div>
@@ -5280,7 +5427,7 @@
   </div>
 
   <!-- 全体合計 -->
-  <div class="revenue-chart">
+  <div class="revenue-chart" style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
     <h3>📊 3軸合計の月次粗利推移</h3>
 
     <table class="revenue-table">
